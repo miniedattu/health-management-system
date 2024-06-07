@@ -1,92 +1,37 @@
-import datetime
+##       Health Management System
+This is a simple command-line Health Management System implemented in Python. It allows users to log and retrieve exercise or food entries, as well as log and retrieve personal information.
 
+## Features
+- Log exercise or food entries for three individuals: Anu, Simon, and John.
+- Retrieve exercise or food entries for the same individuals.
+- Log personal information including gender, height, and weight for the three individuals.
+- Retrieve personal information for the three individuals.
+## Usage
+- Clone the repository:
+  git clone https://github.com/Mrinank-Bhowmick/python-beginner-projects/healthmanagementsystem.git
 
-def gettime():
-    return datetime.datetime.now()
+- Navigate to the project directory:
+  cd healthmanagementsystem
 
+- Run the program:
+  python health_management_system.py
+- Follow the on-screen instructions to log or retrieve entries and personal information.
 
-def inputt(n):
-    if n == 1:
-        d = int(input("Enter 1 for excerise and 2 for food :"))
-        if d == 1:
-            value = input("type here.. \n")
-            with open("anu-exe.txt", "a") as op:
-                op.write(str([str(gettime())]) + ": " + value + "\n ")
-            print("written successfully ")
-        elif d == 2:
-            value = input("type here.. \n")
-            with open("anu-food.txt", "a") as op:
-                op.write(str([str(gettime())]) + ": " + value + "\n ")
-            print("written successfully ")
-    elif n == 2:
-        d = int(input("Enter 1 for exercise and 2 for food :"))
-        if d == 1:
-            value = input("type here.. \n")
-            with open("simon-exe.txt", "a") as op:
-                op.write(str([str(gettime())]) + ": " + value + "\n ")
-            print("written successfully ")
-        elif d == 2:
-            value = input("type here.. \n")
-            with open("simon-food.txt", "a") as op:
-                op.write(str([str(gettime())]) + ": " + value + "\n ")
-            print("written successfully ")
-    elif n == 3:
-        d = int(input("Enter 1 for exercise and 2 for food :"))
-        if d == 1:
-            value = input("type here.. \n")
-            with open("john-exe.txt", "a") as op:
-                op.write(str([str(gettime())]) + ": " + value + "\n ")
-            print("written successfully ")
-        elif d == 2:
-            value = input("type here.. \n")
-            with open("john-food.txt", "a") as op:
-                op.write(str([str(gettime())]) + ": " + value + "\n ")
-            print("written successfully ")
-    else:
-        print("Enter the valid input 1(anu) 2(simon) 3(john)")
+## File Structure
+- src folder: to hold the project
+  health_management_system.py: Contains the main Python code for the Health Management System.
+  anu-exe.txt, anu-food.txt, anu-info.txt: Files storing exercise/food entries and personal information for Anu.
+  simon-exe.txt, simon-food.txt, simon-info.txt: Files storing exercise/food entries and personal information for Simon.
+  john-exe.txt, john-food.txt, john-info.txt: Files storing exercise/food entries and personal information for John.
+- test folder: to hold the test cases
 
+## Requirements
+  Python 3.x
 
-def retrieve(k):
-    if k == 1:
-        c = int(input("enter 1 for exercise and 2 for food"))
-        if c == 1:
-            with open("anu-exe.txt") as op:
-                for i in op:
-                    print(i, end="")
-        elif c == 2:
-            with open("anu-food.txt") as op:
-                for i in op:
-                    print(i, end="")
-    elif k == 2:
-        c = int(input("enter 1 for exercise and 2 for food"))
-        if c == 1:
-            with open("simon-exe.txt") as op:
-                for i in op:
-                    print(i, end="")
-        elif c == 2:
-            with open("simon-food.txt") as op:
-                for i in op:
-                    print(i, end="")
-    elif k == 3:
-        c = int(input("enter 1 for exercise and 2 for food"))
-        if c == 1:
-            with open("john-exe.txt") as op:
-                for i in op:
-                    print(i, end="")
-        elif c == 2:
-            with open("john-food.txt") as op:
-                for i in op:
-                    print(i, end="")
-    else:
-        print("plz enter valid input (anu,simon,john)")
+## Future Improvements
+- Implement a GUI for a more user-friendly interface.
+- Add the ability to update or delete entries.
 
+Feel free to contribute to this project by forking and creating pull requests. 
+If you have any questions or suggestions, please open an issue.
 
-print("health management system: ")
-a = int(input("Press 1 for log the value and 2 for retrieve "))
-
-if a == 1:
-    b = int(input("Press 1 for anu 2 for simon 3 for john "))
-    inputt(b)
-else:
-    b = int(input("Press 1 for anu 2 for simon 3 for john "))
-    retrieve(b)
