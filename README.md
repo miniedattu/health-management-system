@@ -32,6 +32,6 @@ This is a simple command-line Health Management System implemented in Python. It
 - Implement a GUI for a more user-friendly interface.
 - Add the ability to update or delete entries.
 
-Feel free to contribute to this project by forking and creating pull requests. 
-If you have any questions or suggestions, please open an issue.
-
+- Clone the original repository Mrinank-Bhowmick/python-beginner-projects
+  to your local machine and go to the directory projects/healthmanagementsystem From here, you can extend this application.
+  git clone https://github.com/Mrinank-Bhowmick/python-beginner-projects.git
